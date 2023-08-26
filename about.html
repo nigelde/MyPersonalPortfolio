@@ -13,9 +13,14 @@
 
   <body>
     <header>
-      <nav class="nav-bar">
-        <h1 class="name">Nigel Dell</h1>
-        <ul class="nav-items">
+      
+      <nav class="top-nav">
+        <h1 class="name name-mob">Nigel Dell</h1>
+        <input id="menu-toggle" type="checkbox"/>
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+        <ul class="nav-items nav-items-mobile" >
             <li><a class="nav-item" href="index.html">Home</a></li>
             <li><a class="nav-item" href="about.html" id="active">About Me</a></li>
             <li><a class="nav-item" href="education.html">Education</a></li>
@@ -23,10 +28,11 @@
             <li><a class="nav-item" href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
     </header>
 
     <section class="jumbotron">
-      <div class="container">
+      <div>
           <h2 class="heading">About Me</h2>
       </div>
     </section>
@@ -37,7 +43,7 @@
           <img src="https://i.ibb.co/LkYzdwb/Profile-picture.jpg" class="profile-img" alt="Nigel Dell">
         </div>
         <div class="profile-txt-box">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Hello, my name is Nigel, a Cornishman living in the Welsh valleys. Having spent most of my working life as a chef and the last couple of years as a delivery driver, I have decided to try and get in to the world of web development. I started using the Codecademy platform in February '23 and quickly became hooked! I  am currently around halfway through the Front-end Engineer skill path and feel comfortable writing HTML and CSS, along with using the relevant documentation to try new things. I am still getting to grips with the complexities of JavaScript, but know enough to write simple functions to make a site interactive. I'm really looking for a company that is willing to take a punt on someone who is a little older,  but who is eager to learn so much more about building for the web. Outside of work I have two beautiful Border Collies who love, like me, getting to the beach as often as possible! I also have a creaky old cat and keep tropical fish.</p>
         </div>
       </div>
     </section>
@@ -45,9 +51,11 @@
     <footer>
       <div class="footer">
         <p>&copy; 2023 Nigel Dell</p>
-        <a class="link" href="https://github.com/nigelde" target="_blank">GitHub</a>
+        <a class="link" href="https://github.com/nigelde"><i class="fa-brands fa-github fa-lg"></i>  GitHub</a>
       </div>
     </footer>
+
+    <script src="resources/main.js" defer></script>
 
   </body>
 </html>

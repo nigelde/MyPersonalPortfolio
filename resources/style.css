@@ -10,30 +10,87 @@ body {
   min-height: 100vh;
 }
 
-.nav-bar{
-  height: 5rem;
+.top-nav {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid black;
+  justify-content: space-between;
+  background: linear-gradient(to left, #24151F, #F7F2F5);
+  color: #24151F;
+  height: 5rem;
+  padding: 1rem;
 }
 
-h1 {
+.name {
   font-size: 2rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  color: #24151F;
 }
 
 .nav-items {
   display: flex;
-  margin: 0 auto;
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-item {
-  padding: 2rem;
+.nav-items a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 1.66rem;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 0.22rem;
+  width: 1.66rem;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -0.44rem;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 0.44rem;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
 }
 
 #active {
-  color: firebrick;
+  color: yellow;
 }
 
 .jumbotron {
@@ -42,13 +99,14 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heading {
   color: #FFF;
   font-size: 2.5rem;
-  padding-top: 10rem;
 }
 
 .subheading {
@@ -57,15 +115,17 @@ h1 {
 }
 
 .profile-container {
-  height: 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #F7F2F5;
 }
 
 .profile-img-box {
   width: 10rem;
-  height: 10rem;
+  height: 13rem;
 }
 
 .profile-img {
@@ -77,30 +137,27 @@ h1 {
   width: 50%;
   text-align: justify;
   padding-left: 2rem;
+  line-height: 1.3;
 }
 
 .education-container {
   display: flex;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #F7F2F5;
 }
 
-.school {
+.education-box {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.work {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.education-heading {
+.section-heading {
+  font-size: 1.3rem;
   margin-bottom: 1rem;
+  color: #24151F;
 }
 
 .portrait {
@@ -114,14 +171,321 @@ h1 {
   padding-left: 1.5rem;
 }
 
+.courses-heading {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #F7F2F5;
+}
+
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F7F2F5;
+  padding-bottom: 4rem;
+}
+
+.course-img-box {
+  width: 11rem;
+  height: 11rem;
+  margin: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: none;
+  border-radius: 5px;
+  background-color: #F7F2F5;
+  box-shadow: 3px 3px #888;
+  opacity: 0.9;
+}
+
+.modal-content {
+  color: #24151F;
+  background-color: #EEE2EA;
+  padding: 2rem;
+  border: 2px solid #24151F;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+
+.close {
+  color: red;
+  float: right;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 1px solid #24151F;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+
+.course-img {
+  width: 100%;
+  height: 75%;
+}
+
+.education-button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.other-courses-heading {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #F7F2F5;
+}
+
+.other-courses-container {
+  text-align: center;
+  background-color: #F7F2F5;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+.contact-heading {
+  font-size: 1.3rem;
+  color: #24151F;
+  padding: 2rem;
+  background-color: #F7F2F5;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #F7F2F5;
+}
+
+.contact {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  color: #24151F;
+}
+
+.details {
+  padding-left: 2rem;
+}
+
+.experience-container {
+  width: 100%;
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.professional {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projects {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.description {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  list-style: disc;
+}
+
+.btn {
+  padding-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #EEE2EA;
+  color: #24151F;
+  box-shadow: 3px 3px #888;
+}
+
+button:hover {
+  background-color: #24151F;
+  color: #FFF;
+}
+
+button:active {
+  box-shadow: none;
+}
+
 .footer {
-  height: 3rem;
+  width: 100%;
+  height: 4rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-left: 2rem;
-  border-top: 1px solid black;
+  color: #EEE2EA;
+  background: linear-gradient(to left, #F7F2F5, #24151F);
+  border-top: 1px solid #24151F;
 }
 
 .link {
-  margin: 0 auto;
+  padding-right: 2rem;
+  color: #24151F;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 920px) {
+
+  .name {
+    font-size: 1.2rem;
+    margin-left: 0.2rem;
+  }
+
+  .menu-button-container {
+    display: flex;
+  }
+
+  .nav-items {
+    visibility: hidden;
+  }
+
+  .nav-items {
+    position: absolute;
+    top: 0;
+    margin-top: 5rem;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-toggle ~ .nav-items li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menu-toggle:checked ~ .nav-items li {
+    visibility: visible;
+    border: 1px solid #333;
+    height: 2.5rem;
+    padding: 0.5rem;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .nav-items > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    width: 100%;
+    color: #fff;
+    background-color: #24151F;
+  }
+
+  .nav-items li a {
+    text-decoration: none;
+    color: #EEE2EA;
+  }
+
+  .nav-items > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-txt-box {
+    min-width: 80%;
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .education-box {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .portrait {
+    width: 80%;
+  }
+
+  .list {
+    width: 80%;
+  }
+
+  .courses-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .course-img-box {
+    margin: 3rem;
+  }
+
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .professional {
+    padding-bottom: 2rem;
+  }
+
+  .contact-heading {
+    padding-left: 1rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact {
+    width: 100%;
+    justify-content: left;
+    padding-left: 1rem;
+  }
+
+  .footer {
+    padding-left: 1rem;
+
+    .link {
+      padding-right: 1rem;
+    }
+  }
 }

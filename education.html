@@ -13,9 +13,13 @@
 
   <body>
     <header>
-      <nav class="nav-bar">
-        <h1 class="name">Nigel Dell</h1>
-        <ul class="nav-items">
+      <nav class="top-nav">
+        <h1 class="name name-mob">Nigel Dell</h1>
+        <input id="menu-toggle" type="checkbox"/>
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+        <ul class="nav-items nav-items-mobile" >
             <li><a class="nav-item" href="index.html">Home</a></li>
             <li><a class="nav-item" href="about.html">About Me</a></li>
             <li><a class="nav-item" href="education.html" id="active">Education</a></li>
@@ -26,15 +30,15 @@
     </header>
 
     <section class="jumbotron">
-      <div class="container">
+      <div>
         <h2 class="heading">Education</h2>
       </div>
     </section>
 
     <section>
       <div class="education-container">
-        <div class="school">
-          <h4 class="education-heading">School & Early Adult</h4>
+        <div class="education-box">
+          <h4 class="section-heading">School & Early Adult</h4>
           <img class="portrait" src="https://img.freepik.com/premium-photo/empty-classroom-education-university_78895-95.jpg?size=626&ext=jpg" alt="Image of an empty classroom">
           <ul class="list">
             <li>CSEs including Maths, Computer Studies, Physics, Chemistry & Technical Drawing</li>
@@ -42,8 +46,8 @@
             <li>Dip(HE) in Nursing & Healthcare</li>
           </ul>
         </div>
-        <div class="work">
-          <h4 class="education-heading">Chef</h4>
+        <div class="education-box">
+          <h4 class="section-heading">Chef</h4>
           <img class="portrait" src="https://media.istockphoto.com/id/1409730005/photo/chef-cooking-at-a-restaurant-and-flaming-the-food.jpg?s=612x612&w=0&k=20&c=I0Og0TW3bysQjZ1rWoX12fBC3-cJ74dtBopDVwfxThk=" alt="Chefs cooking in a busy kitchen">
           <ul class="list">
             <li>NVQ Level 3 in Catering & Hospitality</li>
@@ -55,12 +59,124 @@
       </div>
     </section>
 
+    <section>
+      <div class="courses-heading">
+        <h4 class="section-heading">Codecademy Courses and Certificates</h4>
+      </div>
+
+      <div class="courses-container">
+        <div class="course-img-box">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" class="course-img" alt="html logo">
+          <p class="course-caption">HTML5 - Good basic knowledge</p>
+          <div class="modal" id="html-modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <ul>
+                <li>Learn HTML</li>
+                <li>HTML Forms</li>
+                <li>HTML Tables</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <button id="html-btn" class="education-button">See More</button>
+          </div>
+        </div>
+        
+
+        <div class="course-img-box">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/240px-CSS3_logo.svg.png" class="course-img" alt="css logo">
+          <p class="course-caption">CSS - Good basic knowledge</p>
+          <div class="modal" id="css-modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <ul>
+                <li>Learn CSS</li>
+                <li>Intermediate CSS</li>
+                <li>CSS Grid</li>
+                <li>CSS Flexbox</li>
+                <li>Transitions</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <button id="css-btn" class="education-button">See More</button>
+          </div>
+        </div>
+
+        <div class="course-img-box" id="JS">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/240px-Unofficial_JavaScript_logo_2.svg.png" class="course-img" alt="javascript logo">
+          <p class="course-caption">JavaScript - Basic knowledge</p>
+          <div class="modal" id="js-modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <ul>
+                <li>Learn JavaScript</li>
+                <li>Handlebars</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <button id="js-btn" class="education-button">See More</button>
+          </div>
+        </div>
+
+        <div class="course-img-box" id="bootstrap">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/301px-Bootstrap_logo.svg.png" class="course-img" alt="bootstrap logo">
+          <p class="course-caption">Bootstrap - Basic knowledge</p>
+          <div class="modal" id="bootstrap-modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <ul>
+                <li>Learn Bootstrap 4</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <button id="bootstrap-btn" class="education-button">See More</button>
+          </div>
+        </div>
+
+        <div class="course-img-box" id="wordpress">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Wordpress-Logo.svg/240px-Wordpress-Logo.svg.png" class="course-img" alt="wordpress logo">
+          <p class="course-caption">Wordpress - Basic knowledge</p>
+          <div class="modal" id="wordpress-modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <ul>
+                <li>Wordpress for Beginners</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <button id="wordpress-btn" class="education-button">See More</button>
+          </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="other-courses-heading">
+        <h4 class="section-heading">Other Courses</h4>
+      </div>
+      <div class="other-courses-container">
+        <ul>
+          <li>Building Interactive JavaScript Websites</li>
+          <li>Learn Python 2</li>
+          <li>How to Deploy a Website</li>
+          <li>Learn Navigation Design</li>
+          <li>Learn Color Design</li>
+        </ul>
+      </div>
+    </section>
+
     <footer>
       <div class="footer">
         <p>&copy; 2023 Nigel Dell</p>
-        <a class="link" href="https://github.com/nigelde" target="_blank">GitHub</a>
+        <a class="link" href="https://github.com/nigelde"><i class="fa-brands fa-github fa-lg"></i>  GitHub</a>
       </div>
     </footer>
+
+    <script src="resources/main.js" defer></script>
 
   </body>
 </html>

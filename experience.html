@@ -13,9 +13,13 @@
 
   <body>
     <header>
-      <nav class="nav-bar">
-        <h1 class="name">Nigel Dell</h1>
-        <ul class="nav-items">
+      <nav class="top-nav">
+        <h1 class="name name-mob">Nigel Dell</h1>
+        <input id="menu-toggle" type="checkbox"/>
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+        <ul class="nav-items nav-items-mobile" >
             <li><a class="nav-item" href="index.html">Home</a></li>
             <li><a class="nav-item" href="about.html">About Me</a></li>
             <li><a class="nav-item" href="education.html">Education</a></li>
@@ -26,65 +30,41 @@
     </header>
 
     <section class="jumbotron">
-      <div class="container">
+      <div>
           <h2 class="heading">Experience</h2>
       </div>
     </section>
 
+    
     <section>
-      <div class="row">
-        <div class="col-sm-3">
-          <h5>HTML</h5>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png">
-          <ul>
-            <li>1 year experience</li>
-          </ul>
+      <div class="experience-container">
+        <div class="professional">
+          <h4 class="section-heading">Professional Projects</h4>
+            <div>
+              <p class="description">A basic static website for a London-based artist</p>
+              <a href="https://nigelde.github.io/JudyHart" class="btn"><button>Visit here</button></a>
+            </div>
         </div>
-         <div class="col-sm-3">
-           <h5>CSS</h5>
-           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjKsfBJL-Yp1swSx7j5hXjmojLtALWHh5VZA&usqp=CAU">
-           <ul>
-             <li>1 year experience</li>
-           </ul>
+        <div class="projects">
+          <h4 class="section-heading">Codecademy Projects</h4>
+            <div>
+              <p class="description">A fictional page for a local club</p>
+              <a href="https://nigelde.github.io/ResponsiveClubSite" class="btn"><button>Visit here</button></a>
+              <p class="description">A fictional landing page for a business</p>
+              <a href="https://nigelde.github.io/CompanyHomePage" class="btn"><button>Visit here</button></a>
+            </ul>
         </div>
-         <div class="col-sm-3">
-           <h5>JavaScript</h5>
-           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png">
-           <ul>
-             <li>1 year experience</li>
-           </ul>
-        </div>
-         <div class="col-sm-3">
-           <h5>Bootstrap</h5>
-           <img src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg">
-           <ul>
-             <li>1 year experience</li>
-           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Professional Projects</h2>
-      <div class="row">
-        <ul>
-          <li>#</li>
-        </ul>
-      </div>
-      <h2>Personal Projects</h2>
-      <div class="row">
-        <ul>
-          <li>#</li>
-        </ul>
       </div>
     </section>
 
     <footer>
       <div class="footer">
         <p>&copy; 2023 Nigel Dell</p>
-        <a class="link" href="https://github.com/nigelde" target="_blank">GitHub</a>
+        <a class="link" href="https://github.com/nigelde"><i class="fa-brands fa-github fa-lg"></i>  GitHub</a>
       </div>
     </footer>
+
+    <script src="resources/main.js" defer></script>
 
   </body>
 </html>
