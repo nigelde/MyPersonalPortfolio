@@ -223,13 +223,11 @@ body {
 }
 
 .close {
-  color: red;
+  color: #24151F;
   float: right;
-  font-size: 0.75rem;
+  font-size: 2rem;
   font-weight: bold;
-  border: 1px solid #24151F;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
+  padding-right: 0.5rem;
 }
 
 .close:hover,
