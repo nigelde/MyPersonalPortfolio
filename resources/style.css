@@ -95,13 +95,32 @@ body {
 
 .jumbotron {
   height: 80vh;
-  background-image: url("https://images.unsplash.com/photo-1680868891320-b1f1de2b6e83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGNvYXN0YWwlMjBsYW5kc2NhcGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#home-jumbotron {
+  background-image: url("https://images.unsplash.com/photo-1680868891320-b1f1de2b6e83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGNvYXN0YWwlMjBsYW5kc2NhcGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+}
+
+#about-jumbotron {
+  background-image: url("https://images.unsplash.com/photo-1547937838-71799e7065c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29hc3RhbCUyMHN1bnNldHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+}
+
+#education-jumbotron {
+  background-image: url("https://images.unsplash.com/photo-1569915238820-bfbf9f0074d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29hc3RhbCUyMHN1bnNldHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60");
+}
+
+#experience-jumbotron {
+  background-image: url("https://images.unsplash.com/photo-1464254786740-b97e5420c299?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvYXN0YWwlMjBzdW5zZXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+}
+
+#contact-jumbotron { 
+  background-image: url("https://images.unsplash.com/photo-1492216629769-ccb908ae77c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGNvYXN0YWwlMjBzdW5zZXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
 }
 
 .heading {
