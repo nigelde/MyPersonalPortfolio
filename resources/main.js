@@ -1,13 +1,22 @@
 
-function showModal(button, modal, close) {
+function showModal(button, modal) {
     button.onclick = function() {
         modal.style.display = "block";
-        close.onclick = function() {
+        button.innerHTML = "See Less";
+        button.onclick = function() {
             modal.style.display = "none";
+            button.innerHTML = "See More";
+            showModal(button, modal);
         }
     }
 }
 
+
+
+function hideModal(button, modal) {
+        modal.style.display = "none";
+        button.innerHTML = "See More";
+    }
 
 
 
@@ -15,7 +24,8 @@ let htmlModal = document.getElementById("html-modal");
 let html = document.getElementById("html-btn");
 let span1 = document.getElementsByClassName("close")[0];
 
-showModal(html, htmlModal, span1);
+showModal(html, htmlModal);
+
 
 let cssModal = document.getElementById("css-modal");
 let css = document.getElementById("css-btn");
